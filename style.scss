@@ -20,7 +20,7 @@ button {
   border: none;
 }
 
-// Header
+// Navigation
 .navigation {
   max-width: 499px;
   width: 100%;
@@ -41,6 +41,8 @@ button {
     }
   }
 }
+
+//  Header
 .header {
   display: flex;
   align-items: center;
@@ -49,6 +51,8 @@ button {
   background: $grey;
   box-shadow: 0 2px 4px 0 $lightGrey;
 }
+
+//  Dropdown
 .dropdown {
   margin-left: 226px;
   cursor: pointer;
@@ -63,6 +67,8 @@ button {
     background: url("./assets/img/ball_arrow_down.svg") no-repeat right;
   }
 }
+
+//  Profile
 .profile {
   display: flex;
   justify-content: center;
@@ -74,6 +80,8 @@ button {
     cursor: pointer;
   }
 }
+
+//  Cart
 .cart {
   position: relative;
   &__counterWrapper {
@@ -97,12 +105,14 @@ button {
   }
 }
 
-// Main
-.main {
+//  Wrapper
+.wrapper {
   display: flex;
   padding: 20px 40px 0 40px;
+  background: $backgroundGrey;
 }
-//aside profile
+
+//  aside profile
 .aside {
   height: 800px;
   border-radius: 10px;
@@ -174,6 +184,7 @@ button {
   }
   &__menu {
     padding: 50px 65px 50px 20px;
+    background: $white;
     &_element {
       display: flex;
       justify-content: space-between;
@@ -244,18 +255,24 @@ button {
     }
   }
 }
-// stats main
+
+//  Main
+.main {
+  margin-left: 50px;
+}
+//  stats main
 .stats {
+  position: relative;
+  max-width: 1015px;
   width: 100%;
   max-height: 184px;
   display: flex;
-  margin-left: 50px;
   padding: 10px 20px 14px;
   background: linear-gradient(238.37deg, rgba(90, 96, 231, 0.35) 6.34%, rgba(30, 30, 40, 0) 103.77%), #2C2C2C;
   border-radius: 10px;
 }
 
-//achievements
+//  achievements
 .achievement {
   max-width: 275px;
   width: 100%;
@@ -310,7 +327,7 @@ button {
   }
 }
 
-//seasons
+//  seasons
 .seasons {
   margin-left: 50px;
   &__toggle {
@@ -384,13 +401,84 @@ button {
   }
 }
 
-//share
+//  share
 .share {
+  z-index: 2;
   margin-left: 44px;
   max-width: 165px;
   width: 100%;
-  background: url("./assets/img/Pattern.svg") no-repeat right;
+  //background: url("./assets/img/Pattern.svg") no-repeat right;
+  &__text {
+    margin-bottom: 7px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 13px;
+    color: $halfBlue;
+  }
+  &__socials {
+    &_link {
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
+  }
 }
+.statsBackground {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+//  "Select"
+.select {
+  margin-top: 20px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  color: $halfBlack;
+  &__optionBlock {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 9px 10px;
+    transition: .3s color ease-in-out;
+    user-select: none;
+    &:hover { color: $blue }
+    &-selected {
+      & > svg {
+        margin-left: 56px;
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__option,
+  &__anotherOption {
+    max-width: 170px;
+    padding: 9px 10px;
+    background: $white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  &__anotherOption:hover {
+    background: $lightGrey;
+    color: $blue;
+    transition: .3s color ease-in-out, .3s background-color ease-in-out;
+  }
+  &__block {
+    position: absolute;
+    max-width: 160px;
+    width: 100%;
+    z-index: 2;
+    opacity: 1;
+    &-disabled {
+      display: none;
+      opacity: 0;
+    }
+  }
+}
+
 
 @keyframes submenuOpen {
   0% { height: 0; opacity: 0; }

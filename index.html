@@ -46,7 +46,7 @@
         </div>
     </div>
 </header>
-<main class="main">
+<main class="wrapper">
     <aside class="aside">
         <div class="aside__header">
             <div class="aside__header_top">
@@ -134,92 +134,120 @@
             </li>
         </ul>
     </aside>
-    <div class="stats">
-        <div class="achievement">
-            <div class="achievement__top">
-                <div class="achievement__top_active">
-                    <div class="achievement__top_block">
+    <div class="main">
+        <div class="stats">
+            <div class="achievement">
+                <div class="achievement__top">
+                    <div class="achievement__top_active">
+                        <div class="achievement__top_block">
+                            <img class="achievement__top_block_img" src="./assets/img/achievement.svg" alt="achievement">
+                            <div class="achievement__top_block_span">5</div>
+                        </div>
+                        <div class="achievement__top_block">
+                            <img class="achievement__top_block_img" src="./assets/img/achievement.svg" alt="achievement">
+                            <div class="achievement__top_block_span">5</div>
+                        </div>
+                        <div class="achievement__top_block">
+                            <img class="achievement__top_block_img" src="./assets/img/achievement.svg" alt="achievement">
+                            <div class="achievement__top_block_span">99</div>
+                        </div>
+                    </div>
+                    <div class="achievement__top_disabled">
+                        <div class="achievement__top_block">
+                            <img class="achievement__top_block_img" src="./assets/img/achievement_inactive.svg" alt="achievement">
+                        </div>
+                        <div class="achievement__top_block">
+                            <img class="achievement__top_block_img" src="./assets/img/achievement_inactive.svg" alt="achievement">
+                        </div>
+                    </div>
+                </div>
+                <div class="achievement__bottom">
+                    <div class="achievement__top_block achievement__bottom_block">
                         <img class="achievement__top_block_img" src="./assets/img/achievement.svg" alt="achievement">
-                        <div class="achievement__top_block_span">5</div>
                     </div>
-                    <div class="achievement__top_block">
+                    <div class="achievement__top_block achievement__bottom_block">
                         <img class="achievement__top_block_img" src="./assets/img/achievement.svg" alt="achievement">
-                        <div class="achievement__top_block_span">5</div>
                     </div>
-                    <div class="achievement__top_block">
+                    <div class="achievement__top_block achievement__bottom_block">
                         <img class="achievement__top_block_img" src="./assets/img/achievement.svg" alt="achievement">
-                        <div class="achievement__top_block_span">99</div>
                     </div>
-                </div>
-                <div class="achievement__top_disabled">
-                    <div class="achievement__top_block">
-                        <img class="achievement__top_block_img" src="./assets/img/achievement_inactive.svg" alt="achievement">
+                    <div class="achievement__top_block achievement__bottom_block">
+                        <img class="achievement__top_block_img" src="./assets/img/achievement.svg" alt="achievement">
                     </div>
-                    <div class="achievement__top_block">
-                        <img class="achievement__top_block_img" src="./assets/img/achievement_inactive.svg" alt="achievement">
+                    <div class="achievement__top_block achievement__bottom_block">
+                        <img class="achievement__top_block_img" src="./assets/img/achievement.svg" alt="achievement">
                     </div>
                 </div>
             </div>
-            <div class="achievement__bottom">
-                <div class="achievement__top_block achievement__bottom_block">
-                    <img class="achievement__top_block_img" src="./assets/img/achievement.svg" alt="achievement">
+            <div class="seasons">
+                <div class="seasons__toggle">
+                    <button class="seasons__toggle_button seasons__toggle_button-active">Все сезоны</button>
+                    <button class="seasons__toggle_button">Сезон 2020/21</button>
                 </div>
-                <div class="achievement__top_block achievement__bottom_block">
-                    <img class="achievement__top_block_img" src="./assets/img/achievement.svg" alt="achievement">
-                </div>
-                <div class="achievement__top_block achievement__bottom_block">
-                    <img class="achievement__top_block_img" src="./assets/img/achievement.svg" alt="achievement">
-                </div>
-                <div class="achievement__top_block achievement__bottom_block">
-                    <img class="achievement__top_block_img" src="./assets/img/achievement.svg" alt="achievement">
-                </div>
-                <div class="achievement__top_block achievement__bottom_block">
-                    <img class="achievement__top_block_img" src="./assets/img/achievement.svg" alt="achievement">
+                <div class="seasons__games">
+                    <div class="seasons__games_wrapper">
+                        <div class="seasons__games_wrapper_content">
+                            <p class="seasons__games_wrapper_content_name">игры</p>
+                            <div class="seasons__games_wrapper_content_count">36</div>
+                        </div>
+                    </div>
+                    <div class="seasons__games_wrapper">
+                        <div class="seasons__games_wrapper_content">
+                            <p class="seasons__games_wrapper_content_name">гол</p>
+                            <div class="seasons__games_wrapper_content_count">67</div>
+                        </div>
+                    </div>
+                    <div class="seasons__games_wrapper">
+                        <div class="seasons__games_wrapper_content">
+                            <p class="seasons__games_wrapper_content_name">пас</p>
+                            <div class="seasons__games_wrapper_content_count">136</div>
+                        </div>
+                    </div>
+                    <div class="seasons__games_wrapper">
+                        <div class="seasons__games_wrapper_content">
+                            <p class="seasons__games_wrapper_content_name">гол + пас</p>
+                            <div class="seasons__games_wrapper_content_count">36</div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="share">
+                <p class="share__text">Поделиться</p>
+                <div class="share__socials">
+                    <a href="#" class="share__socials_link">
+                        <img src="./assets/img/facebook.svg" alt="facebook" class="share__socials_link_img share__socials_link_img_facebook">
+                    </a>
+                    <a href="#" class="share__socials_link">
+                        <img src="./assets/img/vk.svg" alt="vk" class="share__socials_link_img share__socials_link_img_vk">
+                    </a>
+                    <a href="#" class="share__socials_link">
+                        <img src="./assets/img/link.svg" alt="link" class="share__socials_link_img share__socials_link_img_link">
+                    </a>
+                </div>
+            </div>
+            <img src="./assets/img/Pattern.svg" alt="pattern" class="statsBackground">
         </div>
-        <div class="seasons">
-            <div class="seasons__toggle">
-                <button class="seasons__toggle_button seasons__toggle_button-active">Все сезоны</button>
-                <button class="seasons__toggle_button">Сезон 2020/21</button>
-            </div>
-            <div class="seasons__games">
-                <div class="seasons__games_wrapper">
-                    <div class="seasons__games_wrapper_content">
-                        <p class="seasons__games_wrapper_content_name">игры</p>
-                        <div class="seasons__games_wrapper_content_count">36</div>
-                    </div>
+        <ul class="select">
+            <li class="select__option select__option-selected">
+                <div class="select__optionBlock select__optionBlock-selected">
+                    Формат
+                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 6.75L6 1.25L1 6.75" stroke="#ACAFF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                 </div>
-                <div class="seasons__games_wrapper">
-                    <div class="seasons__games_wrapper_content">
-                        <p class="seasons__games_wrapper_content_name">гол</p>
-                        <div class="seasons__games_wrapper_content_count">67</div>
-                    </div>
-                </div>
-                <div class="seasons__games_wrapper">
-                    <div class="seasons__games_wrapper_content">
-                        <p class="seasons__games_wrapper_content_name">пас</p>
-                        <div class="seasons__games_wrapper_content_count">136</div>
-                    </div>
-                </div>
-                <div class="seasons__games_wrapper">
-                    <div class="seasons__games_wrapper_content">
-                        <p class="seasons__games_wrapper_content_name">гол + пас</p>
-                        <div class="seasons__games_wrapper_content_count">36</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="share">
-            <p class="share__text"></p>
-            <div class="share__socials_block">
-                <a href="#" class="share__socials_link"></a>
-            </div>
-        </div>
+                <ul class="select__block select__block-disabled">
+                    <li class="select__anotherOption">Формат</li>
+                    <li class="select__anotherOption">Формат</li>
+                    <li class="select__anotherOption">Формат</li>
+                </ul>
+            </li>
+        </ul>
+        <u-table></u-table>
     </div>
-
 </main>
 
 <script src="./js/asideMenu.js"></script>
+<script src="./js/select.js"></script>
+<script src="./js/table.js"></script>
 </body>
 </html>
