@@ -32,7 +32,9 @@
         </ul>
     </nav>
     <div class="dropdown">
-        <img src="./assets/img/ball.svg" alt="ball" class="dropdown__img">
+        <div class="dropdown__imgWrapper">
+            <img src="./assets/img/ball.svg" alt="ball" class="dropdown__img">
+        </div>
     </div>
     <div class="profile">
         <img src="./assets/img/profile_img.svg" alt="#" class="profile__img">
@@ -43,8 +45,181 @@
             <p class="cart__counter">1</p>
         </div>
     </div>
-
 </header>
+<main class="main">
+    <aside class="aside">
+        <div class="aside__header">
+            <div class="aside__header_top">
+                <img src="./assets/img/profile_img.svg" alt="photo" class="aside__header_top_img">
+                <div class="aside__header_block">
+                    <div class="aside__header_block_ratio">
+                        89.40
+                        <span class="aside__header_block_ratio-span">
+                            999
+                            <svg class="aside__header_block_ratio-span-arrow" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.125 6L6.5 3.25L3.875 6" stroke="#86E3CE" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6.5 9.75V3.75" stroke="#86E3CE" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <p class="aside__header_block_name">Елишакашвили
+                        <span class="aside__header_block_surname">Михо</span>
+                    </p>
+                </div>
+            </div>
+            <div class="aside__header_edit">
+                <svg class="aside__header_edit_img" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.77081 11.0354L5.24998 10.4521L10.6708 5.03123C10.8986 4.80342 10.8986 4.43408 10.6708 4.20627L9.59996 3.1354C9.37216 2.90759 9.0028 2.90759 8.77501 3.1354L3.35415 8.55625L2.77081 11.0354Z" stroke="#ACAFF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M11.2291 11.0355H8.02081" stroke="#ACAFF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <p class="aside__header_edit_p">Редактировать</p>
+            </div>
+        </div>
+        <ul class="aside__menu">
+            <li class="aside__menu_element" id="asideMenu">
+                <svg class="aside__menu_element_userIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 11.25C13.7949 11.25 15.25 9.79493 15.25 8C15.25 6.20507 13.7949 4.75 12 4.75C10.2051 4.75 8.75 6.20507 8.75 8C8.75 9.79493 10.2051 11.25 12 11.25Z" stroke="#ACAFF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.84771 19.25H17.1527C18.2946 19.25 19.1742 18.2681 18.641 17.2584C17.8565 15.7731 16.0682 14 12.0002 14C7.93223 14 6.14389 15.7731 5.35946 17.2584C4.82619 18.2681 5.70579 19.25 6.84771 19.25Z" stroke="#ACAFF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <p class="aside__menu_element_p">Статистика</p>
+                <svg class="aside__menu_arrowUp" id="asideArrowUp" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 6.75L6 1.25L1 6.75" stroke="#ACAFF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </li>
+            <li class="aside__submenu aside__submenu-disabled" id="asideSubMenu">
+                <ul class="aside__submenu_list">
+                    <li class="aside__submenu_list_element">
+                        Футбол
+                    </li>
+                    <li class="aside__submenu_list_element">
+                        Баскетбол
+                    </li>
+                    <li class="aside__submenu_list_element">
+                        Волейбол
+                    </li>
+                </ul>
+            </li>
+            <li class="aside__menu_element" >
+                <svg class="aside__menu_element_userIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.75 8.75C4.75 7.64543 5.64543 6.75 6.75 6.75H17.25C18.3546 6.75 19.25 7.64543 19.25 8.75V17.25C19.25 18.3546 18.3546 19.25 17.25 19.25H6.75C5.64543 19.25 4.75 18.3546 4.75 17.25V8.75Z" stroke="#ACAFF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8 4.75V8.25" stroke="#ACAFF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16 4.75V8.25" stroke="#ACAFF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7.75 10.75H16.25" stroke="#ACAFF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <p class="aside__menu_element_p">Ближайшие игры</p>
+            </li>
+            <li class="aside__menu_element" >
+                <svg class="aside__menu_element_userIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 6.75H7.75C6.64543 6.75 5.75 7.64543 5.75 8.75V17.25C5.75 18.3546 6.64543 19.25 7.75 19.25H16.25C17.3546 19.25 18.25 18.3546 18.25 17.25V8.75C18.25 7.64543 17.3546 6.75 16.25 6.75H15" stroke="#ACAFF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14 8.25H10C9.44772 8.25 9 7.80228 9 7.25V5.75C9 5.19772 9.44772 4.75 10 4.75H14C14.5523 4.75 15 5.19772 15 5.75V7.25C15 7.80228 14.5523 8.25 14 8.25Z" stroke="#ACAFF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.75 12.25H14.25" stroke="#ACAFF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.75 15.25H14.25" stroke="#ACAFF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <p class="aside__menu_element_p">Игровые отчёты</p>
+            </li>
+            <li class="aside__menu_element">
+                <svg class="aside__menu_element_userIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.75 12.375C4.75 16.3791 7.99594 19.625 12 19.625C16.0041 19.625 19.25 16.3791 19.25 12.375C19.25 8.37094 16.0041 5.125 12 5.125C9.47437 5.125 7.25038 6.41645 5.95236 8.375M5.95236 8.375V4.375M5.95236 8.375H10" stroke="#ACAFF3" stroke-width="1.5"/>
+                    <path d="M12 8.375V12.375L14 14.375" stroke="#ACAFF3" stroke-width="1.5"/>
+                </svg>
+                <p class="aside__menu_element_p">История заказов</p>
+            </li>
+            <li class="aside__menu_element aside__menu_element_quit">
+                <svg class="aside__menu_element_userIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.75 8.75L19.25 12L15.75 15.25" stroke="#ACAFF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M19 12H10.75" stroke="#ACAFF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15.25 4.75H6.75C5.64543 4.75 4.75 5.64543 4.75 6.75V17.25C4.75 18.3546 5.64543 19.25 6.75 19.25H15.25" stroke="#ACAFF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <p class="aside__menu_element_p">Выйти</p>
+            </li>
+        </ul>
+    </aside>
+    <div class="stats">
+        <div class="achievement">
+            <div class="achievement__top">
+                <div class="achievement__top_active">
+                    <div class="achievement__top_block">
+                        <img class="achievement__top_block_img" src="./assets/img/achievement.svg" alt="achievement">
+                        <div class="achievement__top_block_span">5</div>
+                    </div>
+                    <div class="achievement__top_block">
+                        <img class="achievement__top_block_img" src="./assets/img/achievement.svg" alt="achievement">
+                        <div class="achievement__top_block_span">5</div>
+                    </div>
+                    <div class="achievement__top_block">
+                        <img class="achievement__top_block_img" src="./assets/img/achievement.svg" alt="achievement">
+                        <div class="achievement__top_block_span">99</div>
+                    </div>
+                </div>
+                <div class="achievement__top_disabled">
+                    <div class="achievement__top_block">
+                        <img class="achievement__top_block_img" src="./assets/img/achievement_inactive.svg" alt="achievement">
+                    </div>
+                    <div class="achievement__top_block">
+                        <img class="achievement__top_block_img" src="./assets/img/achievement_inactive.svg" alt="achievement">
+                    </div>
+                </div>
+            </div>
+            <div class="achievement__bottom">
+                <div class="achievement__top_block achievement__bottom_block">
+                    <img class="achievement__top_block_img" src="./assets/img/achievement.svg" alt="achievement">
+                </div>
+                <div class="achievement__top_block achievement__bottom_block">
+                    <img class="achievement__top_block_img" src="./assets/img/achievement.svg" alt="achievement">
+                </div>
+                <div class="achievement__top_block achievement__bottom_block">
+                    <img class="achievement__top_block_img" src="./assets/img/achievement.svg" alt="achievement">
+                </div>
+                <div class="achievement__top_block achievement__bottom_block">
+                    <img class="achievement__top_block_img" src="./assets/img/achievement.svg" alt="achievement">
+                </div>
+                <div class="achievement__top_block achievement__bottom_block">
+                    <img class="achievement__top_block_img" src="./assets/img/achievement.svg" alt="achievement">
+                </div>
+            </div>
+        </div>
+        <div class="seasons">
+            <div class="seasons__toggle">
+                <button class="seasons__toggle_button seasons__toggle_button-active">Все сезоны</button>
+                <button class="seasons__toggle_button">Сезон 2020/21</button>
+            </div>
+            <div class="seasons__games">
+                <div class="seasons__games_wrapper">
+                    <div class="seasons__games_wrapper_content">
+                        <p class="seasons__games_wrapper_content_name">игры</p>
+                        <div class="seasons__games_wrapper_content_count">36</div>
+                    </div>
+                </div>
+                <div class="seasons__games_wrapper">
+                    <div class="seasons__games_wrapper_content">
+                        <p class="seasons__games_wrapper_content_name">гол</p>
+                        <div class="seasons__games_wrapper_content_count">67</div>
+                    </div>
+                </div>
+                <div class="seasons__games_wrapper">
+                    <div class="seasons__games_wrapper_content">
+                        <p class="seasons__games_wrapper_content_name">пас</p>
+                        <div class="seasons__games_wrapper_content_count">136</div>
+                    </div>
+                </div>
+                <div class="seasons__games_wrapper">
+                    <div class="seasons__games_wrapper_content">
+                        <p class="seasons__games_wrapper_content_name">гол + пас</p>
+                        <div class="seasons__games_wrapper_content_count">36</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="share">
+            <p class="share__text"></p>
+            <div class="share__socials_block">
+                <a href="#" class="share__socials_link"></a>
+            </div>
+        </div>
+    </div>
 
+</main>
+
+<script src="./js/asideMenu.js"></script>
 </body>
 </html>
