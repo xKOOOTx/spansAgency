@@ -773,6 +773,7 @@ button {
 //  mobile menu
 .mobile__menu {
   position: absolute;
+  z-index: 99;
   top: 75px;
   right: -999px;
   width: 100%;
@@ -1041,7 +1042,6 @@ button {
     right: 0;
   }
 }
-
 @keyframes mobileHide {
   from {
     right: 0;
@@ -1119,7 +1119,7 @@ button {
   .dropdown {
     margin-left: 10px;
   }
-  .share, .aside, .statsBackground, .footerBlock {
+  .share, .aside, .statsBackground {
     display: none;
   }
   .achievement__share {
@@ -1139,6 +1139,15 @@ button {
     right: 0;
     z-index: 99;
   }
+  .table {
+    margin-bottom: 373px;
+  }
+  .footer {
+    &__wrapper {
+      overflow-x: scroll;
+      padding: 0 10px;
+    }
+  }
 }
 
 @media (max-width: 450px) {
@@ -1147,7 +1156,7 @@ button {
   }
   .header,
   .dropdown,
-  .profile {
+  .profile, .footerBlock {
     display: none;
   }
   .stats {
@@ -1210,13 +1219,7 @@ button {
       margin-top: 10px;
     }
   }
-  .mobile__player, .mobile__footer, {
-    display: block;
-  }
-  .main {
-  }
   .table {
-    margin-bottom: 373px;
     max-width: 430px;
     width: 100%;
     overflow: auto;
@@ -1240,6 +1243,9 @@ button {
     &__body {
       width: 430px;
     }
+  }
+  .mobile__footer {
+    display: block;
   }
 }
 

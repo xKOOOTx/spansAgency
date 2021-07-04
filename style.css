@@ -723,6 +723,7 @@ button {
 
 .mobile__menu {
   position: absolute;
+  z-index: 99;
   top: 75px;
   right: -999px;
   width: 100%;
@@ -1062,7 +1063,7 @@ button {
     margin-left: 10px;
   }
 
-  .share, .aside, .statsBackground, .footerBlock {
+  .share, .aside, .statsBackground {
     display: none;
   }
 
@@ -1085,6 +1086,15 @@ button {
     right: 0;
     z-index: 99;
   }
+
+  .table {
+    margin-bottom: 373px;
+  }
+
+  .footer__wrapper {
+    overflow-x: scroll;
+    padding: 0 10px;
+  }
 }
 @media (max-width: 450px) {
   body {
@@ -1093,7 +1103,7 @@ button {
 
   .header,
 .dropdown,
-.profile {
+.profile, .footerBlock {
     display: none;
   }
 
@@ -1158,12 +1168,7 @@ button {
     margin-top: 10px;
   }
 
-  .mobile__player, .mobile__footer {
-    display: block;
-  }
-
   .table {
-    margin-bottom: 373px;
     max-width: 430px;
     width: 100%;
     overflow: auto;
@@ -1187,6 +1192,10 @@ button {
   }
   .table__body {
     width: 430px;
+  }
+
+  .mobile__footer {
+    display: block;
   }
 }
 
