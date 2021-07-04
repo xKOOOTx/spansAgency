@@ -6,8 +6,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+html, body {
+  height: 100%;
+}
 body {
   font-family: Proxima Nova Rg;
+  display: flex;
+  flex-direction: column;
+  font-size: 100%;
+  //  position for mobile menu
+  position: relative;
 }
 li {
   list-style: none;
@@ -47,6 +55,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  flex-shrink: 0;
   height: 80px;
   background: $grey;
   box-shadow: 0 2px 4px 0 $lightGrey;
@@ -108,7 +117,8 @@ button {
 //  Wrapper
 .wrapper {
   display: flex;
-  padding: 20px 40px 0 40px;
+  flex: 1 0 auto;
+  padding: 20px 40px 247px 40px;
   background: $backgroundGrey;
 }
 
@@ -117,6 +127,7 @@ button {
   height: 800px;
   border-radius: 10px;
   box-shadow: 0 2px 8px 0 $lightGrey;
+  background: $white;
   &__header {
     background: linear-gradient(238.37deg, rgba(90, 96, 231, 0.35) 6.34%, rgba(30, 30, 40, 0) 103.77%), #2C2C2C;
     border-radius: 10px;
@@ -205,7 +216,7 @@ button {
       }
       &-active {
         & .aside__menu_arrowUp {
-          transform: rotate(180deg);
+          transform: rotate(0deg);
         }
       }
       &_userIcon {
@@ -219,7 +230,7 @@ button {
       }
     }
     &_arrowUp {
-      transform: rotate(0deg);
+      transform: rotate(180deg);
       transition: .3s transform ease-in-out;
     }
   }
@@ -254,10 +265,27 @@ button {
       transition: height .3s ease-in-out;
     }
   }
+  &__share {
+    display: none;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 13px;
+    color: $halfBlue;
+    &__socials {
+      margin: 5px;
+      &_link {
+        &:not(:last-child) {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
 }
 
 //  Main
 .main {
+  width: 100%;
   margin-left: 50px;
 }
 //  stats main
@@ -276,6 +304,14 @@ button {
 .achievement {
   max-width: 275px;
   width: 100%;
+  &__header {
+    display: none;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+    color: $halfBlack;
+  }
   &__top {
     display: flex;
     justify-content: space-between;
@@ -370,6 +406,7 @@ button {
       display: flex;
       justify-content: center;
       align-items: center;
+      z-index: 2;
       border-radius: 5px;
       background: linear-gradient(to left top, $blue 10%,  transparent 30%, transparent 70%, $blue 90%);
       &_content {
@@ -484,7 +521,6 @@ button {
   max-width: 1015px;
   width: 100%;
   margin-top: 20px;
-  box-shadow: 0, 2px, 8px, 0 $lightGrey;
   &__header {
     display: flex;
     justify-content: space-around;
@@ -509,11 +545,13 @@ button {
       line-height: 13px;
     }
     &_button {
+      width: 100%;
       display: flex;
       align-items: center;
       background: $white;
       color: $halfBlack;
       cursor: pointer;
+      white-space: nowrap;
     }
   }
   &__body {
@@ -535,6 +573,10 @@ button {
       &:nth-child(even) {
         background: $white;
       }
+      &:last-child {
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 2px 8px $lightGrey;
+      }
     }
     &_season {
       display: flex;
@@ -546,6 +588,16 @@ button {
       flex: 1;
     }
   }
+}
+.l {
+  width: 100%;
+}
+#seasonSortBtn {
+  cursor: pointer;
+  user-select: none;
+}
+#goalSortBtn {
+  justify-content: center;
 }
 
 //sort buttons in table header
@@ -565,7 +617,6 @@ button {
     }
   }
 }
-
 .downSortBtn {
   & > path {
     fill: $halfBlack;
@@ -578,6 +629,399 @@ button {
 }
 
 
+
+//  footer block
+.footerBlock {
+  flex-shrink: 0;
+  padding: 50px 40px 20px;
+  background: $black;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $twentyFivePercentBlue;
+  padding-bottom: 33px;
+  &__wrapper {
+    display: flex;
+  }
+  &__contacts {
+    &_store {
+      display: flex;
+      margin: 30px 0 50px;
+      &_appstoreLink {
+        margin-right: 10px;
+      }
+    }
+    &_links {
+      &_header {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+        color: $halfBlue;
+      }
+      &_phone,
+      &_email {
+        display: flex;
+        align-items: center;
+        margin-top: 23px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+        color: $white;
+        &-img {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+  &__sections {
+    &_header {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+      color: $halfBlue;
+    }
+    &_element {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+      color: $white;
+    }
+  }
+  &__header {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    color: $halfBlue;
+  }
+  &__element {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    &:last-child {
+      margin-right: 116px;
+    }
+    &:hover {
+      & .footer__element_link {
+        color: $halfBlue;
+      }
+    }
+    &_link {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+      color: $white;
+      transition: .3s color ease-in-out;
+    }
+  }
+}
+.subFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 23px;
+  &__text {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    color: $white;
+  }
+}
+
+//  mobile navigation
+.mobile__header {
+  display: none;
+  justify-content: space-between;
+  padding: 20px 10px;
+  &_wrapper {
+    display: flex;
+    align-items: center;
+    width: 69px;
+    justify-content: space-between;
+  }
+  &_burger {
+    position: relative;
+    width: 24px;
+    height: 3px;
+    background: $blue;
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 3px;
+      background: $blue;
+    }
+    &:before {
+      transform: translateY(-5px);
+    }
+    &:after {
+      width: 13px;
+      transform: translateY(5px);
+    }
+  }
+}
+//  mobile menu
+.mobile__menu {
+  position: absolute;
+  top: 75px;
+  right: -999px;
+  width: 100%;
+  height: 88vh;
+  display: none;
+  flex-direction: column;
+  padding: 50px 0;
+  align-items: center;
+  background: $white;
+  animation: .3s mobileHide ease-in-out;
+
+  &_element {
+    margin: 0 auto;
+    text-align: center;
+    &:not(:last-child) {
+      margin-bottom: 100px;
+    }
+  }
+  &-active {
+    display: flex;
+    right: 0;
+    animation: .3s mobileShow ease-in-out;
+  }
+}
+.mobile__subMenu {
+  display: none;
+  height: 0;
+  margin-top: 20px;
+  padding: 30px 50px 10px;
+  border-radius: 5px;
+  background: $backgroundGrey;
+  transition: .3s height ease-in-out;
+  &_element {
+    margin-bottom: 30px;
+  }
+  &-active {
+    display: block;
+    height: 100%;
+  }
+}
+//  mobile profile
+.mobile__player {
+  display: none;
+  padding: 20px 10px;
+  &_top {
+    display: flex;
+    &_img {
+      width: 70px;
+      height: 70px;
+      padding: 1px;
+      border: 1px solid $red;
+      border-radius: 50%;
+    }
+  }
+  &_block {
+    margin-left: 10px;
+  }
+  &_points {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    color: $white;
+    &_span {
+      padding: 2px 6px;
+      border-radius: 10px;
+      background: $blue;
+      vertical-align: top;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 13px;
+      color: $tenPercentBlue;
+    }
+  }
+  &_name {
+    margin-top: 20px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    color: $white;
+    &-span {
+      display: block;
+    }
+  }
+  &_bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+  &_edit {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 13px;
+    color: $halfBlue;
+    text-decoration: underline;
+  }
+  &_socials {
+    display: flex;
+    justify-content: space-between;
+    &_header {
+      padding-right: 28px;
+      margin-bottom: 6px;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 13px;
+      color: $halfBlue;
+    }
+  }
+  background: linear-gradient(238.37deg, rgba(90, 96, 231, 0.35) 6.34%, rgba(30, 30, 40, 0) 103.77%), #2C2C2C;
+
+}
+//  mobile profile menu
+.mobile__playerMenu {
+  display: none;
+  padding: 20px 10px;
+  overflow-x: scroll;
+  width: 100%;
+  min-height: 80px;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &_element {
+    display: flex;
+    align-items: center;
+    min-width: 190px;
+    max-height: 40px;
+    padding: 9px 14px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    color: $black;
+    background: $white;
+    &-active {
+      background: $blue;
+      color: $white;
+    }
+    &:not(:last-child) {
+      margin-right: 10px;
+      justify-content: space-between;
+    }
+  }
+  &_img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+  &_arrowDown {
+    margin-left: 10px;
+  }
+}
+//  mobile sub menu
+#mobilePlayerMenu {
+  position: relative;
+}
+.mobile__playerSubmenu {
+  position: absolute;
+  display: none;
+  top: 310px;
+  max-width: 190px;
+  width: 100%;
+  &_list {
+    padding: 13px 7px;
+    border-radius: 5px;
+    background: $white;
+  }
+  &_link {
+    display: block;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    color: $halfBlack;
+  }
+  &_element {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  &-active {
+    display: block;
+    z-index: 99;
+  }
+}
+//  mobile footer
+.mobile__footer {
+  display: none;
+  flex-shrink: 0;
+  padding: 20px 50px;
+  background: $black;
+  &_links {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    color: $white;
+    &:first-child {
+      margin-bottom: 10px;
+    }
+  }
+  &_socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 27px 0 40px;
+  }
+  &_storeLinks {
+    display: flex;
+    justify-content: center;
+    &_img {
+      display: block;
+      width: 105px;
+      height: 30px;
+      &:first-child {
+        margin-right: 10px;
+      }
+    }
+  }
+  &_logo {
+    display: block;
+    margin: 37px auto 20px;
+    height: 20px;
+    width: 120px;
+  }
+  &_copyrights {
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 13px;
+    color: $white;
+  }
+}
+
+//  other
+.overflowHid {
+  overflow: hidden;
+}
+
+
+//  animation
 @keyframes submenuOpen {
   0% { height: 0; opacity: 0; }
   100% { height: 100%; opacity: 1; }
@@ -588,5 +1032,214 @@ button {
   100% { height: 0; opacity: 0; }
 }
 
-// fill color for sort button #5A60E7 blue
-// fill color for sort button #909090 grey
+//  mobile menu animation
+@keyframes mobileShow {
+  from {
+    right: -999px;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes mobileHide {
+  from {
+    right: 0;
+  }
+  to {
+    right: -999px;
+  }
+}
+
+//  mobile menu more btn
+@keyframes mobileMenuMoreBtnShow {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+@keyframes mobileMenuMoreBtnHide {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0;
+  }
+}
+
+@media (max-width: 1500px) {
+  .header {
+    padding: 0 15px;
+  }
+  .aside {
+    &__share {
+      display: block;
+      margin-top: -40px;
+      margin-left: 35px;
+    }
+  }
+  .navigation {
+    margin: 10px;
+    &__list {
+      &_element {
+        &_link {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .profile {
+    margin: 0 10px;
+  }
+  .seasons {
+    &__games {
+      &_wrapper {
+        &_content {
+          &_name {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+  .statsBackground {
+    display: none;
+  }
+  .share {
+    display: none;
+  }
+  .achievement__share {
+    display: block;
+  }
+}
+
+@media (max-width: 800px) {
+  .dropdown {
+    margin-left: 10px;
+  }
+  .share, .aside, .statsBackground, .footerBlock {
+    display: none;
+  }
+  .achievement__share {
+    display: block;
+  }
+  .wrapper {
+    padding: 5px;
+  }
+  .main {
+    margin: 0;
+  }
+  // mobile aside
+  .mobile-active {
+    display: block;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    z-index: 99;
+  }
+}
+
+@media (max-width: 450px) {
+  body {
+    background: $backgroundGrey;
+  }
+  .header,
+  .dropdown,
+  .profile {
+    display: none;
+  }
+  .stats {
+    display: grid;
+    max-height: 280px;
+
+  }
+  .seasons {
+    grid-row: 1;
+    margin-left: 0;
+    &__games {
+      &_wrapper {
+        max-width: 65px;
+        max-height: 65px;
+        &_content {
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 22px;
+          &_name {
+            font-size: 9px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 13px;
+          }
+        }
+      }
+    }
+  }
+  .mobile__header,
+  .mobile__playerMenu {
+    display: flex;
+  }
+  .mobile__header {
+    background: $grey;
+  }
+  .wrapper {
+    display: block;
+    padding: 0;
+  }
+  .stats {
+    border-radius: 0;
+    padding: 10px;
+    min-height: 320px;
+  }
+  .seasons {
+    &__toggle {
+      justify-content: space-between;
+      &_button {
+        padding: 6px 15px;
+      }
+    }
+  }
+  .achievement {
+    &__header {
+      display: block;
+      margin: 20px 0 11px;
+    }
+    &__bottom {
+      margin-top: 10px;
+    }
+  }
+  .mobile__player, .mobile__footer, {
+    display: block;
+  }
+  .main {
+  }
+  .table {
+    margin-bottom: 373px;
+    max-width: 430px;
+    width: 100%;
+    overflow: auto;
+    &__header {
+      padding: 10px 10px 5px 10px;
+      width: 430px;
+      &_name {
+        align-self: center;
+        flex: 1.3;
+      }
+      &_buttons {
+        flex: 1.3;
+      }
+      &_button {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 30px;
+      }
+    }
+    &__body {
+      width: 430px;
+    }
+  }
+}
+

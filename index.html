@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <title>CrossBall</title>
 </head>
@@ -31,6 +32,7 @@
             </li>
         </ul>
     </nav>
+
     <div class="dropdown">
         <div class="dropdown__imgWrapper">
             <img src="./assets/img/ball.svg" alt="ball" class="dropdown__img">
@@ -46,6 +48,117 @@
         </div>
     </div>
 </header>
+<div class="mobile__header">
+    <a href="./index.html" class="mobile__header_logoLink">
+        <img src="./assets/img/Logo.svg" alt="mobile_logo" class="mobile__header_logo">
+    </a>
+    <div class="mobile__header_wrapper">
+        <img src="./assets/img/mobile_cart.svg" alt="mobile_cart" class="mobile__header_cart">
+        <div class="mobile__header_burger" id="burgerBtn"></div>
+    </div>
+</div>
+<div class="mobile__player">
+    <div class="mobile__player_top">
+        <img src="./assets/img/profile_img.svg" alt="profile_img" class="mobile__player_top_img">
+        <div class="mobile__player_block">
+            <p class="mobile__player_points">
+                89.90
+                <span class="mobile__player_points_span">999</span>
+            </p>
+            <h3 class="mobile__player_name">Елишакашвили <span class="mobile__player_name-span">Михо</span></h3>
+        </div>
+    </div>
+    <div class="mobile__player_bottom">
+        <p class="mobile__player_edit">
+            <img src="./assets/img/edit.svg" alt="edit" class="mobile__player_edit_img">
+            Редактировать
+        </p>
+        <div class="mobile__player_socialsBlock">
+            <h3 class="mobile__player_socials_header">Поделиться</h3>
+            <ul class="mobile__player_socials">
+                <li class="mobile__player_socials_element">
+                    <a href="#" class="mobile__player_socials_link">
+                        <img src="./assets/img/facebook.svg" alt="facebook" class="mobile__player_socials_img">
+                    </a>
+                </li>
+                <li class="mobile__player_socials_element">
+                    <a href="#" class="mobile__player_socials_link">
+                        <img src="./assets/img/vk.svg" alt="vk" class="mobile__player_socials_img">
+                    </a>
+                </li>
+                <li class="mobile__player_socials_element">
+                    <a href="#" class="mobile__player_socials_link">
+                        <img src="./assets/img/link.svg" alt="link" class="mobile__player_socials_img">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<ul class="mobile__playerMenu">
+    <li class="mobile__playerMenu_element" id="mobilePlayerMenu">
+        <img src="./assets/img/mobile_menu_chart.svg" alt="mobile_chart" class="mobile__playerMenu_img">
+        Статистика
+        <img src="./assets/img/arrow_down.svg" alt="arrow_down" class="mobile__playerMenu_arrowDown">
+    </li>
+    <li class="mobile__playerSubmenu">
+        <ul class="mobile__playerSubmenu_list">
+            <li class="mobile__playerSubmenu_element">
+                <a href="#" class="mobile__playerSubmenu_link">Футбол</a>
+            </li>
+            <li class="mobile__playerSubmenu_element">
+                <a href="#" class="mobile__playerSubmenu_link">Баскетбол</a>
+            </li>
+            <li class="mobile__playerSubmenu_element">
+                <a href="#" class="mobile__playerSubmenu_link">Волейбол</a>
+            </li>
+        </ul>
+    </li>
+    <li class="mobile__playerMenu_element">
+        <img src="./assets/img/aside_calendar.svg" alt="mobile_calendar" class="mobile__playerMenu_img">
+        Ближайшие игры
+    </li>
+    <li class="mobile__playerMenu_element">
+        <img src="./assets/img/aside_report.svg" alt="mobile_chart" class="mobile__playerMenu_img">
+        Игровые отчёты
+    </li>
+    <li class="mobile__playerMenu_element">
+        <img src="./assets/img/aside_history.svg" alt="mobile_chart" class="mobile__playerMenu_img">
+        Игровые отчёты
+    </li>
+    <li class="mobile__playerMenu_element">
+        <img src="./assets/img/aside_logOut.svg" alt="mobile_chart" class="mobile__playerMenu_img">
+        Выйти
+    </li>
+</ul>
+<ul class="mobile__menu" id="mobileMenu">
+    <li class="mobile__menu_element">
+        <a href="#" class="mobile__menu_link">Расписание</a>
+    </li>
+    <li class="mobile__menu_element">
+        <a href="#" class="mobile__menu_link">Игровые отчеты</a>
+    </li>
+    <li class="mobile__menu_element">
+        <a href="#" class="mobile__menu_link">Стастика</a>
+    </li>
+    <li class="mobile__menu_element" id="mobileMenu_more">
+        <a href="#" class="mobile__menu_link">
+            Ещё
+            <img src="./assets/img/arrow_down.svg" alt="arrow_down" class="mobile__menu_element_arrow">
+        </a>
+        <ul class="mobile__subMenu" id="mobileSubMenu">
+            <li class="mobile__subMenu_element">
+                <a href="#" class="mobile__subMenu_link mobile__menu_link">Lorem</a>
+            </li>
+            <li class="mobile__subMenu_element">
+                <a href="#" class="mobile__subMenu_link mobile__menu_link">Ipsum</a>
+            </li>
+            <li class="mobile__subMenu_element">
+                <a href="#" class="mobile__subMenu_link mobile__menu_link">Dolor</a>
+            </li>
+        </ul>
+    </li>
+</ul>
 <main class="wrapper">
     <aside class="aside">
         <div class="aside__header">
@@ -73,6 +186,20 @@
                     <path d="M11.2291 11.0355H8.02081" stroke="#ACAFF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 <p class="aside__header_edit_p">Редактировать</p>
+                <div class="aside__share">
+                    <p class="aside__share__text">Поделиться</p>
+                    <div class="aside__share__socials">
+                        <a href="#" class="aside__share__socials_link">
+                            <img src="./assets/img/facebook.svg" alt="facebook" class="aside__share__socials_link_img share__socials_link_img_facebook">
+                        </a>
+                        <a href="#" class="aside__share__socials_link">
+                            <img src="./assets/img/vk.svg" alt="vk" class="aside__share__socials_link_img share__socials_link_img_vk">
+                        </a>
+                        <a href="#" class="aside__share__socials_link">
+                            <img src="./assets/img/link.svg" alt="link" class="aside__share__socials_link_img share__socials_link_img_link">
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
         <ul class="aside__menu">
@@ -137,6 +264,7 @@
     <div class="main">
         <div class="stats">
             <div class="achievement">
+                <h3 class="achievement__header">Награды и достижения</h3>
                 <div class="achievement__top">
                     <div class="achievement__top_active">
                         <div class="achievement__top_block">
@@ -244,7 +372,7 @@
         </ul>
         <div class="table">
             <div class="table__header">
-                <div class="table__header_name">Сезон</div>
+                <div class="table__header_name" id="seasonSortBtn">Сезон</div>
                 <div class="table__header_buttons">
                     <button class="table__header_button table__header_button_gamesNumber" id="gamesNumberSortBtn">
                         <span class="image__sortBtn">
@@ -303,24 +431,182 @@
                     </button>
                 </div>
             </div>
-            <ul class="table__body">
-                <li class="table__body_element">
-                    <div class="table__body_season">2020202</div>
-                    <div class="table__body_wrapper">
-                        <div class="table__body_gamesNumber l">2</div>
-                        <div class="table__body_goal l">2</div>
-                        <div class="table__body_pass l">3</div>
-                        <div class="table__body_goalAndPass l">1</div>
-                        <div class="table__body_rating l">89.40</div>
-                    </div>
-                </li>
-            </ul>
+            <ul class="table__body"></ul>
         </div>
     </div>
 </main>
+<footer class="footerBlock">
+    <div class="footer">
+        <div class="footer__contacts">
+            <a href="#" class="footer__contacts_logo">
+                <img src="./assets/img/footer_logo.svg" alt="logo" class="footer__contacts_logo_img">
+            </a>
+            <div class="footer__contacts_store">
+                <a href="#" class="footer__contacts_store_appstoreLink">
+                    <img src="./assets/img/appstore.svg" alt="appstore">
+                </a>
+                <a href="#" class="footer__contacts_store_googlePlayLink">
+                    <img src="./assets/img/googleplay.svg" alt="googlePlay">
+                </a>
+            </div>
+            <div class="footer__contacts_links">
+                <div class="footer__contacts_links_header">Наши контакты</div>
+                <a href="tel:+74951090309" class="footer__contacts_links_phone">
+                    <img src="./assets/img/phone.svg" alt="phone" class="footer__contacts_links_phone-img">
+                    +7(495)109-03-09
+                </a>
+                <a href="mailto:go@crossball.ru" class="footer__contacts_links_email">
+                    <img src="./assets/img/email.svg" alt="email" class="footer__contacts_links_email-img">
+                    go@crossball.ru
+                </a>
+            </div>
+        </div>
+        <div class="footer__wrapper">
+            <div class="footer__sections">
+                <h3 class="footer__sections_header footer__header">Разделы</h3>
+                <ul class="footer__sections_list footer__list">
+                    <li class="footer__faq_element footer__element">
+                        <a href="#" class="footer__element_link">Главная</a>
+                    </li>
+                    <li class="footer__faq_element footer__element">
+                        <a href="#" class="footer__element_link">Расписание</a>
+                    </li>
+                    <li class="footer__faq_element footer__element">
+                        <a href="#" class="footer__element_link">Игровые отчеты</a>
+                    </li>
+                    <li class="footer__faq_element footer__element">
+                        <a href="#" class="footer__element_link">Статистика</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__kindsOfSports">
+                <h3 class="footer__kindsOfSports_header footer__header">Виды спорта</h3>
+                <ul class="footer__kindsOfSports_list footer__list">
+                    <li class="footer__faq_element footer__element">
+                        <a href="#" class="footer__element_link">Футбол</a>
+                    </li>
+                    <li class="footer__faq_element footer__element">
+                        <a href="#" class="footer__element_link">Баскетбол</a>
+                    </li>
+                    <li class="footer__faq_element footer__element">
+                        <a href="#" class="footer__element_link">Волейбол</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__useful">
+                <h3 class="footer__useful_header footer__header">Полезное</h3>
+                <ul class="footer__useful_list footer__list">
+                    <li class="footer__faq_element footer__element">
+                        <a href="#" class="footer__element_link">Как записаться?</a>
+                    </li>
+                    <li class="footer__faq_element footer__element">
+                        <a href="#" class="footer__element_link">Ответы на вопросы</a>
+                    </li>
+                    <li class="footer__faq_element footer__element">
+                        <a href="#" class="footer__element_link">Достижения</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__faq">
+                <h3 class="footer__faq_header footer__header">Чё почём</h3>
+                <ul class="footer__faq_list footer__list">
+                    <li class="footer__faq_element footer__element">
+                        <a href="#" class="footer__element_link">Абонементы</a>
+                    </li>
+                    <li class="footer__faq_element footer__element">
+                        <a href="#" class="footer__element_link">Корп. клиентам</a>
+                    </li>
+                    <li class="footer__faq_element footer__element">
+                        <a href="#" class="footer__element_link">Партнёры</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="subFooter">
+        <p class="subFooter__copyright subFooter__text">&#169; Все права защищены</p>
+        <div class="subFooter__socials">
+            <a href="#" class="subFooter__socials_link">
+                <img src="./assets/img/footer_instagram.svg" alt="instagram" class="subFooter__socials_img">
+            </a>
+            <a href="#" class="subFooter__socials_link">
+                <img src="./assets/img/footer_vk.svg" alt="vk" class="subFooter__socials_img">
+            </a>
+            <a href="#" class="subFooter__socials_link">
+                <img src="./assets/img/footer_facebook.svg" alt="facebook" class="subFooter__socials_img">
+            </a>
+            <a href="#" class="subFooter__socials_link">
+                <img src="./assets/img/footer_youtube.svg" alt="youtube" class="subFooter__socials_img">
+            </a>
+            <a href="#" class="subFooter__socials_link">
+                <img src="./assets/img/footer_telegram.svg" alt="telegram" class="subFooter__socials_img">
+            </a>
+            <a href="#" class="subFooter__socials_link">
+                <img src="./assets/img/footer_whatsapp.svg" alt="whatsapp" class="subFooter__socials_img">
+            </a>
+        </div>
+        <p class="subFooter__made subFooter__text">Cделали в Spans</p>
+    </div>
+</footer>
+<div class="mobile__footer">
+    <a href="mailto:go@crossball.ru" class="mobile__footer_links">go@crossball.ru</a>
+    <a href="tel:+74951090309" class="mobile__footer_links">+7(495)109-03-09</a>
+    <ul class="mobile__footer_socials">
+        <li class="mobile__footer_socials_element">
+            <a href="#" class="mobile__footer_element_link">
+                <img src="./assets/img/footer_vk.svg" alt="vk" class="mobile__footer_element_img">
+            </a>
+        </li>
+        <li class="mobile__footer_socials_element">
+            <a href="#" class="mobile__footer_element_link">
+                <img src="./assets/img/footer_facebook.svg" alt="facebook" class="mobile__footer_element_img">
+            </a>
+        </li>
+        <li class="mobile__footer_socials_element">
+            <a href="#" class="mobile__footer_element_link">
+                <img src="./assets/img/footer_instagram.svg" alt="instagram" class="mobile__footer_element_img">
+            </a>
+        </li>
+        <li class="mobile__footer_socials_element">
+            <a href="#" class="mobile__footer_element_link">
+                <img src="./assets/img/footer_youtube.svg" alt="youtube" class="mobile__footer_element_img">
+            </a>
+        </li>
+        <li class="mobile__footer_socials_element">
+            <a href="#" class="mobile__footer_element_link">
+                <img src="./assets/img/footer_whatsapp.svg" alt="whatsapp" class="mobile__footer_element_img">
+            </a>
+        </li>
+        <li class="mobile__footer_socials_element">
+            <a href="#" class="mobile__footer_element_link">
+                <img src="./assets/img/footer_telegram.svg" alt="telegram" class="mobile__footer_element_img">
+            </a>
+        </li>
+    </ul>
+    <ul class="mobile__footer_storeLinks">
+       <li class="mobile__footer_storeLinks_element">
+           <a href="#" class="mobile__footer_storeLinks_link">
+               <img src="./assets/img/appstore.svg" alt="appstore" class="mobile__footer_storeLinks_img">
+           </a>
+       </li>
+       <li class="mobile__footer_storeLinks_element">
+           <a href="#" class="mobile__footer_storeLinks_link">
+               <img src="./assets/img/googleplay.svg" alt="googleplay" class="mobile__footer_storeLinks_img">
+           </a>
+       </li>
+    </ul>
+    <img src="./assets/img/footer_logo.svg" alt="footerLogo" class="mobile__footer_logo">
+    <div class="mobile__footer_copyrights">
+        <p class="mobile__footer_copy">&copy; Все права защищены</p>
+        <p class="mobile__footer_copy">Cделали в Spans</p>
+    </div>
+</div>
 
 <script src="./js/asideMenu.js"></script>
 <script src="./js/select.js"></script>
 <script src="./js/table.js"></script>
+<script src="./js/profile.js"></script>
+<script src="./js/burger.js"></script>
+<script src="./js/mobileSubMenu.js"></script>
 </body>
 </html>
